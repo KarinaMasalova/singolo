@@ -1,0 +1,95 @@
+/*normalize*/
+
+body {
+  margin: 0;
+}
+  
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/*header*/
+
+header {
+    height: 89px;
+    background: #2d303a;
+    border-bottom: #323746 solid 6px;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 940px;
+}
+
+.header-block {
+    height: 89px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo .logo-text h1 {
+    padding-top: 25%;
+    font-size: 25px;
+    font-family: 'Lato-Bold';
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.logo .logo-text h1 span {
+    color: #f06c64;
+}
+
+.logo .logo-text:link,
+.logo .logo-text:visited,
+.logo .logo-text:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar {
+    width: 450px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.navigation li {
+    position: relative;
+    padding: 8.8% 0 0 6.3%;
+}
+
+.navigation li a {
+    font-size: 12px;
+    font-family: 'Lato-Bold';
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navigation li:not(:first-child)::before {
+    content: "·";
+    position: absolute;
+    left: 11px;
+    top: 42px;
+    color: #494e62;
+}
+
+.navigation li a:hover {
+    color: #f06c64;
+}
