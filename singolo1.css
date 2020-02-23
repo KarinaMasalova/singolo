@@ -133,3 +133,86 @@ header {
 .navigation li a:hover {
     color: #f06c64;
 }
+
+/*our services block*/
+
+.our-services {
+    padding: 5% 0 3.8% 0;
+    border-bottom: solid #fff 6px;
+    background-color: #f2f2f2;
+}
+
+.our-services-headline {
+    font-size: 30px;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    line-height: 18.5px;
+    letter-spacing: -0.2px;
+    color: #666d89;
+    text-transform: capitalize;
+}
+
+.services-description {
+    padding: 3% 0;
+    font-size: 18px;
+    line-height: 29px;
+    color: #767e9e;
+    font-family: "Lato-Light";
+    font-weight: 300;
+}
+
+.services-description p span {
+    letter-spacing: 0.15px;
+}
+
+.services-all-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services-block {
+    display: flex;
+    width: 300px;
+    padding: 1.9% 0 1% 0;
+}
+
+.services-block-description {
+    padding-left: 6%;
+}
+
+.services-block-icon.first-line {
+    padding-top: 1px;
+}
+
+.services-block-icon.second-line {
+    padding-top: 6px;
+}
+
+.services-block-headline {
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    letter-spacing: -0.1px;
+    text-transform: capitalize;
+}
+
+.services-block-text {
+    width: 219px;
+    height: 64.5px;
+    padding-top: 4%;
+    font-size: 12px;
+    line-height: 22px;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    word-break: break-all;
+    word-spacing: 1px;
+    color: #767e9e;
+    overflow: hidden;
+}
+
+.services-block-headline.second-line {
+    padding-top: 6px;
+}
