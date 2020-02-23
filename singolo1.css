@@ -20,46 +20,6 @@ ul {
   margin: 0;
 }
 
-/*Slider block*/
-
-.slider-block {
-    height: 595px;
-    background-color: #f06c64;
-    border-bottom: solid #ea676b 5px;
-}
-
-.slider-container {
-    display: flex;
-    height: 595px;
-    justify-content: flex-start;
-}
-
-.left-arrow,
-.right-arrow {
-    width: 12px;
-}
-
-.left-arrow:hover,
-.right-arrow:hover {
-    opacity: 0.5;
-}
-
-.left-arrow {
-    padding: 29.9% 0 0 2px;
-}
-
-.right-arrow {
-    margin: 29.9% 0 0 19.1%;
-}
-
-.first-iphone img {
-    margin-top: 21.1%;
-    margin-left: 23%;
-}
-
-.second-iphone img {
-    margin: 35.4% 0 0 25.6%;
-}
 /*header*/
 
 header {
@@ -132,6 +92,47 @@ header {
 
 .navigation li a:hover {
     color: #f06c64;
+}
+
+/*Slider block*/
+
+.slider-block {
+    height: 595px;
+    background-color: #f06c64;
+    border-bottom: solid #ea676b 5px;
+}
+
+.slider-container {
+    display: flex;
+    height: 595px;
+    justify-content: flex-start;
+}
+
+.left-arrow,
+.right-arrow {
+    width: 12px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    opacity: 0.5;
+}
+
+.left-arrow {
+    padding: 29.9% 0 0 2px;
+}
+
+.right-arrow {
+    margin: 29.9% 0 0 19.1%;
+}
+
+.first-iphone img {
+    margin-top: 21.1%;
+    margin-left: 23%;
+}
+
+.second-iphone img {
+    margin: 35.4% 0 0 25.6%;
 }
 
 /*our services block*/
