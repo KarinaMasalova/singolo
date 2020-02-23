@@ -83,7 +83,7 @@ header {
 }
 
 .navigation li:not(:first-child)::before {
-    content: "·";
+    content: "\00B7";
     position: absolute;
     left: 11px;
     top: 42px;
