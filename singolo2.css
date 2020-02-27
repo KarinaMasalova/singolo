@@ -1,0 +1,91 @@
+/*normalize*/
+
+h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/*Portfolio + some selectors from About-us*/
+
+.portfolio-block {
+    padding: 69px 0 66px 0;
+    background-color: #2d303a;
+    border-bottom: solid #323746 6px;
+}
+
+.portfolio-headline {
+    display: initial;
+}
+
+.portfolio-headline h2,
+.about-us-headline h2 {
+    display: inherit;
+    letter-spacing: -0.19px;
+    font-size: 30px;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    line-height: 18px;
+    color: #666d89;
+    text-transform: capitalize;
+}
+
+.portfolio-description,
+.about-us-description {
+    font-size: 18px;
+    font-family: "Lato-Light";
+    font-weight: 300;
+    line-height: 30px;
+    color: #767e9e;
+}
+
+.portfolio-description,
+.about-us-description {
+    padding: 20px 0 11px 0;
+}
+
+.portfolio-navigation {
+    display: flex;
+}
+
+.portfolio-button {
+    padding: 3px 7px 3px 7px;
+    margin: 0 5px 0 1px;
+    font-size: 12px;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    border: 0.5px solid #767e9e;
+    border-radius: 4px;
+    color: #767e9e;
+    background-color: transparent;
+    text-transform: capitalize;
+}
+
+.portfolio-button.btn-2,
+.portfolio-button.btn-3 {
+    margin-left: 4px;
+}
+
+.portfolio-button.btn-4 {
+    margin-left: 4px;
+    padding: 0 5px 0 6px !important;
+}
+
+.portfolio-button:hover {
+    color: #dedede;
+    border-color: #dedede;
+    cursor: pointer;
+}
+
+.portfolio-projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 19px;
+    max-height: 602px;
+    overflow: hidden;
+}
+
+.portfolio-project.line-2,
+.portfolio-project.line-3 {
+    margin-top: 16px;
+}
