@@ -89,3 +89,115 @@ h2, h3 {
 .portfolio-project.line-3 {
     margin-top: 16px;
 }
+
+/*About Us*/
+
+.about-us-block {
+    padding: 68px 0 67px 0;
+    border-bottom: 6px #fff solid;
+    background-color: #f2f2f2;
+}
+
+.about-us-description {
+    padding: 27px 0 45px 0;
+    word-spacing: 1px;
+}
+
+.all-specialists {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sp-photo-2 {
+    margin-left: -1px;
+}
+
+.sp-photo-3 {
+    margin-left: 2px;
+}
+
+.specialist-name {
+    max-width: 300px;
+    padding-top: 14px;
+    font-size: 15px;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    line-height: 18px;
+    color: #666d89;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.specialist-name h3 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.specialist-name.second {
+    letter-spacing: 0.1px;
+}
+
+.specialist-name.third {
+    letter-spacing: 0.2px;
+}
+
+.specialist-description {
+    padding: 9px 0 0 0;
+    max-width: 302px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    letter-spacing: -0.1px;
+}
+
+.specialist-description.second p {
+    letter-spacing: 0.14px;
+    word-break: break-all;
+}
+
+.specialist-description.third p {
+    padding-left: 1px;
+    letter-spacing: 0.13px;
+    word-break: break-all;
+}
+
+.specialist-in-social-networks {
+    display: flex;
+    padding-top: 22px;
+    padding-left: 1px;
+}
+
+.specialist-in-social-networks.third {
+    padding-left: 2px;
+}
+
+.social-network {
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+}
+
+.facebook,
+.twitter,
+.google,
+.linkedin {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 7.5px;
+}
+
+.twitter {
+    width: 14px;
+    height: 13.8px;
+}
+
+.social-network:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
