@@ -1,0 +1,634 @@
+﻿/*normalize*/
+
+body {
+  margin: 0;
+}
+  
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+    border: 0 none;
+}
+
+textarea {
+    padding: 0;
+    border: 0 none;
+}
+
+/*header*/
+
+header {
+    height: 89px;
+    background: #2d303a;
+    border-bottom: #323746 solid 6px;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 940px;
+}
+
+.header-block {
+    height: 89px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo .logo-text h1 {
+    padding-top: 25%;
+    font-size: 25px;
+    font-family: "Lato-Bold";
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.logo .logo-text h1 span {
+    color: #f06c64;
+}
+
+.logo .logo-text:link,
+.logo .logo-text:visited,
+.logo .logo-text:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar {
+    width: 450px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.navigation li {
+    position: relative;
+    padding: 8.8% 0 0 6.3%;
+}
+
+.main-page {
+    color: #f06c64 !important;
+}
+
+.navigation li a {
+    font-size: 12px;
+    font-family: "Lato-Bold";
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navigation li:not(:first-child)::before {
+    content: "\00B7";
+    position: absolute;
+    left: 11px;
+    top: 42px;
+    color: #494e62;
+}
+
+.navigation li a:hover {
+    color: #f06c64;
+}
+
+/*Slider block*/
+
+.slider-block {
+    height: 595px;
+    background-color: #f06c64;
+    border-bottom: solid #ea676b 5px;
+}
+
+.slider-container {
+    display: flex;
+    height: 595px;
+    justify-content: flex-start;
+}
+
+.left-arrow,
+.right-arrow {
+    width: 12px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    opacity: 0.5;
+}
+
+.left-arrow {
+    padding: 29.9% 0 0 0.25%;
+}
+
+.right-arrow {
+    margin: 29.9% 0 0 19.1%;
+}
+
+.first-iphone img {
+    margin-top: 21.1%;
+    margin-left: 23%;
+}
+
+.second-iphone img {
+    margin: 35.4% 0 0 25.6%;
+}
+
+/*our services block*/
+
+.our-services {
+    height: 494px;
+    border-bottom: solid #fff 6px;
+    background-color: #f2f2f2;
+}
+
+.our-services-container {
+    padding: 7.2% 0 3.8% 0;
+}
+
+.our-services-headline {
+    font-size: 30px;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    line-height: 18.5px;
+    letter-spacing: -0.2px;
+    color: #666d89;
+    text-transform: capitalize;
+}
+
+.services-description {
+    padding: 3% 0;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 29px;
+    color: #767e9e;
+    font-family: "Lato-Light";
+    font-weight: 300;
+}
+
+.services-all-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services-block {
+    display: flex;
+    width: 300px;
+    margin: 1.9% 0 1% 0;
+}
+
+.services-block-description {
+    padding-left: 6%;
+}
+
+.services-block-icon.first-line {
+    padding-top: 1px;
+}
+
+.services-block-icon.second-line {
+    padding-top: 6px;
+}
+
+.services-block-headline {
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    letter-spacing: -0.1px;
+    text-transform: capitalize;
+}
+
+.services-block-text {
+    width: 219px;
+    height: 64.5px;
+    padding-top: 4%;
+    text-align: justify;
+    font-size: 12px;
+    line-height: 22px;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    color: #767e9e;
+    overflow: hidden;
+}
+
+.services-block-headline.second-line {
+    padding-top: 6px;
+}
+
+/*Portfolio + some selectors from About-us*/
+
+.portfolio-block {
+    background-color: #2d303a;
+    border-bottom: solid #323746 6px;
+}
+
+.portfolio-container {
+    padding: 7.2% 0 7% 0;
+}
+
+.portfolio-headline h2,
+.about-us-headline h2 {
+    display: inherit;
+    letter-spacing: -0.19px;
+    font-size: 30px;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    line-height: 18px;
+    color: #666d89;
+    text-transform: capitalize;
+}
+
+.portfolio-description,
+.about-us-description {
+    font-size: 18px;
+    font-family: "Lato-Light";
+    font-weight: 300;
+    line-height: 30px;
+    color: #767e9e;
+}
+
+.portfolio-description,
+.about-us-description {
+    padding: 2.9% 0 1.2% 0;
+}
+
+.portfolio-navigation {
+    display: flex;
+}
+
+.portfolio-button {
+    padding: 3px 7px;
+    margin: 0 5px 0 1px;
+    font-size: 12px;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    border: 0.5px solid #767e9e;
+    border-radius: 4px;
+    color: #767e9e;
+    background-color: transparent;
+    text-transform: capitalize;
+}
+
+.portfolio-button.btn-1 {
+    border: 0.5px solid #dedede;
+    color: #dedede;
+}
+
+.portfolio-button.btn-2,
+.portfolio-button.btn-3 {
+    margin-left: 4px;
+}
+
+.portfolio-button.btn-4 {
+    margin-left: 4px;
+    padding: 0 5px 0 6px;
+}
+
+.portfolio-button:hover {
+    color: #dedede;
+    border-color: #dedede;
+    cursor: pointer;
+}
+
+.portfolio-projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2%;
+    max-height: 602px;
+    overflow: hidden;
+}
+
+.portfolio-project.line-2,
+.portfolio-project.line-3 {
+    margin-top: 16px;
+}
+
+/*About Us*/
+
+.about-us-block {
+    border-bottom: 6px #fff solid;
+    background-color: #f2f2f2;
+}
+
+.about-us-container {
+    padding: 7.3% 0 7.1% 0;
+}
+
+.about-us-description {
+    padding: 2.8% 0 4.8% 0;
+    text-align: justify;
+}
+
+.all-specialists {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sp-photo-2 {
+    margin-left: -1px;
+}
+
+.sp-photo-3 {
+    margin-left: 2px;
+}
+
+.specialist-name {
+    max-width: 300px;
+    margin-top: 4.3%;
+    font-size: 18px;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    line-height: 18px;
+    color: #666d89;
+    text-transform: capitalize;
+}
+
+.specialist-name h3 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.specialist-name.first {
+    letter-spacing: -0.2px;
+}
+
+.specialist-name.second {
+    letter-spacing: -0.1px;
+}
+
+.specialist-description {
+    padding: 3.4% 0 0 0;
+    max-width: 302px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    letter-spacing: -0.1px;
+    text-align: justify;
+}
+
+.specialist-description.second p {
+    letter-spacing: 0.14px;
+}
+
+.specialist-description.third p {
+    padding-left: 1px;
+    letter-spacing: 0.13px;
+}
+
+.specialist-in-social-networks {
+    display: flex;
+    padding-top: 7.3%;
+    padding-left: 1px;
+}
+
+.specialist-in-social-networks.third {
+    padding-left: 2px;
+}
+
+.social-network {
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+}
+
+.facebook,
+.twitter,
+.google,
+.linkedin {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 7.5px;
+}
+
+.social-network:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+/*Get a Quote*/
+
+.get-a-quote-block {
+    background-color: #f06c64;
+    border-bottom: solid 6px #ea676b;
+}
+
+.get-a-quote-container {
+    padding: 7.3% 0 1.1% 0;
+}
+
+.get-a-quote-headline h2 {
+    margin-bottom: 2.8%;
+    font-size: 30px;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    line-height: 18px;
+    color: #f0d8d9;
+    letter-spacing: -0.2px;
+}
+
+.get-a-quote-description p {
+    margin-bottom: 4.7%;
+    font-size: 18px;
+    font-family: "Lato-Light";
+    font-weight: 300;
+    line-height: 30px;
+    color: #f0d8d9;
+    text-align: justify;
+}
+
+form input {
+    margin-bottom: 16px;
+}
+
+.feedback {
+    display: flex;
+    justify-content: space-between;
+}
+
+#name,
+#email,
+#subject,
+.textarea-description {
+    width: 605px;
+    background-color: #d6564f;
+    border-radius: 5px;
+    padding-left: 14px;
+    color: #f48c8f;
+}
+
+#name,
+#email,
+#subject {
+    height: 36px;
+}
+
+.textarea-description {
+    height: 195px;
+    padding-top: 1.2%;
+}
+
+#name::placeholder,
+#email::placeholder,
+#subject::placeholder,
+.textarea-description::placeholder {
+    font-size: 12px;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    line-height: 22px;
+    color: #f48c8f;
+}
+
+#submit {
+    margin-top: 15px;
+    width: 15%;
+    height: 7%;
+    background-color: #d6564f;
+    border: solid 2px rgb(45, 48, 58, 0.5);
+    border-radius: 5px;
+    color: #f48c8f
+}
+
+#submit:hover {
+    background-color: rgb(45, 48, 58, 0.5);
+    cursor: pointer;
+}
+
+.contact-info {
+    margin-left: 2.2%;
+}
+
+.contact-info-headline h3 {
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-family: "Lato-Black";
+    font-weight: 900;
+    line-height: 18px;
+    color: #f0d8d9;
+    text-transform: capitalize;
+}
+
+.contact-info-description p {
+    width: 300px;
+    font-size: 12px;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    line-height: 22px;
+    text-align: justify;
+    color: #f0d8d9;
+    word-break: break-all;
+}
+
+.contact-info-location,
+.contact-info-telephone,
+.contact-info-email {
+    display: flex;
+}
+
+.location-address,
+.telephone-number,
+.email-link {
+    width: 300px;
+    font-size: 12px;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    line-height: 22px;
+    color: #f0d8d9;
+}
+
+.location-address a:active,
+.telephone-number a:active {
+    text-decoration: none;
+}
+
+.contact-info-location {
+    margin-top: 20px;
+}
+
+.location-icon {
+    margin: 3px 0 0 4px;
+}
+
+.location-address {
+    margin-left: 13px;
+}
+
+.telephone-icon {
+    margin: 0.3% 0 0 0.3%;
+}
+
+.telephone-number {
+    margin: -1px 0 0 3.3%;
+}
+
+.email-icon {
+    margin: 1% 0 0 1px;
+}
+
+.email-link {
+    margin-left: 10px;
+}
+
+/*FOOTER*/
+
+.footer-block {
+    background-color: #2d303a;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    margin: 3.2% 0 3.2% 1px;
+    font-size: 12px;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    letter-spacing: -0.1px;
+    color: #666d89;
+}
+
+.social-networks-footer {
+    display: flex;
+}
+
+.social-network.social-network-footer {
+    margin: 13.7% 0 0 8px;
+}
+
+.facebook-footer:hover,
+.twitter-footer:hover,
+.google-footer:hover,
+.linkedin-footer:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
