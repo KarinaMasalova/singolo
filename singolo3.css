@@ -173,3 +173,38 @@ form input {
 .email-link {
     padding-left: 10px;
 }
+
+/*FOOTER*/
+
+.footer-block {
+    background-color: #2d303a;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    margin: 3.2% 0 3.2% 0px;
+    font-size: 12px;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    color: #666d89;
+}
+
+.social-networks-footer {
+    display: flex;
+}
+
+.social-network.social-network-footer {
+    margin: 14% 0 0 8px;
+}
+
+.facebook-footer:hover,
+.twitter-footer:hover,
+.google-footer:hover,
+.linkedin-footer:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
