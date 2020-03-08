@@ -496,10 +496,10 @@ form input {
     padding-top: 1.2%;
 }
 
-#name::placeholder,
-#email::placeholder,
-#subject::placeholder,
-.textarea-description::placeholder {
+#name::-webkit-input-placeholder,
+#email::-webkit-input-placeholder,
+#subject::-webkit-input-placeholder,
+.textarea-description::-webkit-input-placeholder {
     font-size: 12px;
     font-family: "Lato-Regular";
     font-weight: 400;
