@@ -35,9 +35,15 @@ textarea {
     border: 0 none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*header*/
 
 header {
+    position: sticky;
+    top: 0;
     height: 89px;
     background: #2d303a;
     border-bottom: #323746 solid 6px;
@@ -89,16 +95,23 @@ header {
     padding: 8.8% 0 0 6.3%;
 }
 
-.main-page {
-    color: #f06c64 !important;
-}
-
 .navigation li a {
     font-size: 12px;
     font-family: "Lato-Bold";
-    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.active {
+    color: #f06c64;
+}
+
+.navigation li a:not(.active) {
+    color: #fff;
+}
+
+.navigation li a:not(.active):hover {
+    color: #f06c64;
 }
 
 .navigation li:not(:first-child)::before {
@@ -107,10 +120,6 @@ header {
     left: 11px;
     top: 42px;
     color: #494e62;
-}
-
-.navigation li a:hover {
-    color: #f06c64;
 }
 
 /*Slider block*/
