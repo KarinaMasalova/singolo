@@ -328,7 +328,8 @@ p.portfolio-button.btn-4 {
     padding: 3px;
 }
 
-.portfolio-button:hover {
+.portfolio-button:hover,
+p.portfolio-button.active-tab {
     color: #dedede;
     border-color: #dedede;
     cursor: pointer;
