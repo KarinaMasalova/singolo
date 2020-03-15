@@ -374,10 +374,18 @@
                         <div class="feedback">
                             <form class="feedback-form" action="#" method="POST">
                                 <input type="text" name="name" id="name" placeholder="Name (Required)" autocomplete="off" required style="font-family: 'Lato-Regular'; font-size: 12px;">
-                                <input type="email" name="email" id="email" placeholder="Email (Required)" autocomplete="off" required style="font-family: 'Lato-Regular'; font-size: 12px;">
+                                <input type="email" name="email" id="email" placeholder="Email (Required)" autocomplete="off" required pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+.[a-z]$" style="font-family: 'Lato-Regular'; font-size: 12px;">
                                 <input type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off" style="font-family: 'Lato-Regular'; font-size: 12px;">
-                                <textarea class="textarea-description" cols="30" rows="10" placeholder="Describe your project in detail..." style="resize: none; font-family: 'Lato-Regular'; font-size: 12px;"></textarea>
-                                <input type="submit" id="submit" value="Submit">
+                                <textarea class="textarea-description" id="description" cols="30" rows="10" placeholder="Describe your project in detail..." style="resize: none; font-family: 'Lato-Regular'; font-size: 12px;"></textarea>
+                                <button id="submit">Submit</button>
+                                <div id="message-block" class="hidden">
+                                    <div id="message">
+                                        <p><span class="possible-messages" id="first-result"></span></p>
+                                        <p><span class="possible-messages" id="second-result"></span></p>
+                                        <p><span class="possible-messages" id="third-result"></span></p>
+                                        <button class="message-block-btn">OK</button>
+                                    </div>
+                                </div>
                             </form>
                             <div class="contact-info">
                                 <div class="contact-info-headline">
