@@ -1,9 +1,15 @@
 const MENU = document.getElementById('menu');
+const PORTFOLIO_TABS = document.getElementById('portfolio-nav-buttons');
 const SUBMIT_BUTTON = document.getElementById('submit');
 
 MENU.addEventListener('click', function (event) {
     MENU.querySelectorAll('a').forEach(element => element.classList.remove('active'));
     event.target.classList.add('active');
+});
+
+PORTFOLIO_TABS.addEventListener('click', (event) => {
+    PORTFOLIO_TABS.querySelectorAll('p').forEach(element => element.classList.remove('active-tab'));
+    event.target.classList.add('active-tab');
 });
 
 SUBMIT_BUTTON.addEventListener('click', (event) => {

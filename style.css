@@ -283,36 +283,49 @@ header {
     padding: 2.9% 0 1.2% 0;
 }
 
-.portfolio-navigation {
+.portfolio-navigation ul {
     display: flex;
-}
+    width: 300px;
+    list-style: none;
+  }
 
-.portfolio-button {
-    padding: 3px 7px;
-    margin: 0 5px 0 1px;
+.portfolio-navigation ul li p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1px;
     font-size: 12px;
-    font-family: "Lato-Regular";
     font-weight: 400;
-    border: 0.5px solid #767e9e;
-    border-radius: 4px;
+    font-family: "Lato-Regular";
+    border: 1px solid #767e9e;
+    border-radius: 5px;
     color: #767e9e;
-    background-color: transparent;
     text-transform: capitalize;
 }
 
-.portfolio-button.btn-1 {
-    border: 0.5px solid #dedede;
-    color: #dedede;
+p.portfolio-button.btn-1 {
+    margin-left: 1px;
+    padding: 3px 7px;
+    width: 13px;
 }
 
-.portfolio-button.btn-2,
-.portfolio-button.btn-3 {
-    margin-left: 4px;
+p.portfolio-button.btn-2 {
+    padding: 3px 6px;
+    width: 64px;
+    letter-spacing: -0.05px;
+    margin-left: 10px;
 }
 
-.portfolio-button.btn-4 {
-    margin-left: 4px;
-    padding: 0 5px 0 6px;
+p.portfolio-button.btn-3 {
+    width: 90px;
+    margin-left: 10px;
+    padding: 3px 0px;
+}
+  
+p.portfolio-button.btn-4 {
+    width: 50px;
+    margin-left: 10px;
+    padding: 3px;
 }
 
 .portfolio-button:hover {
@@ -321,11 +334,16 @@ header {
     cursor: pointer;
 }
 
+.portfolio-nav-buttons li p.portfolio-button.btn-1.active-tab {
+    border: 0.5px solid #dedede;
+    color: #dedede;
+}
+
 .portfolio-projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 2%;
+    margin-top: 1.9%;
     max-height: 602px;
     overflow: hidden;
 }
@@ -517,7 +535,7 @@ form input {
 }
 
 #submit {
-    margin-top: 15px;
+    margin: 15px 0 2.6% 0;
     width: 15%;
     height: 7%;
     background-color: #d6564f;
