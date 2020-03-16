@@ -1,5 +1,13 @@
 const MENU = document.getElementById('menu');
+
+const VERTICAL_iPHONE = document.getElementById('vertical-iphone');
+const HORIZONTAL_iPHONE = document.getElementById('horizontal-iphone');
+
+const VERTICAL_SCREEN = document.getElementById('vertical-screen');
+const HORIZONTAL_SCREEN = document.getElementById('horizontal-screen');
+
 const PORTFOLIO_TABS = document.getElementById('portfolio-nav-buttons');
+
 const SUBMIT_BUTTON = document.getElementById('submit');
 
 MENU.addEventListener('click', function (event) {
@@ -34,5 +42,21 @@ SUBMIT_BUTTON.addEventListener('click', (event) => {
         document.getElementById('message-block').classList.remove('hidden');
         document.body.style.overflowY = 'hidden';
         document.getElementById('feedback-form').reset();
+    }
+});
+
+HORIZONTAL_iPHONE.addEventListener ('click', function (event) {
+    if (HORIZONTAL_SCREEN.style.display == 'none') {
+        HORIZONTAL_SCREEN.style.display = 'inherit';
+    } else {
+        HORIZONTAL_SCREEN.style.display = 'none';
+    }
+});
+
+VERTICAL_iPHONE.addEventListener ('click', function (event) {
+    if (VERTICAL_SCREEN.style.display == 'none') {
+        VERTICAL_SCREEN.style.display = 'inherit';
+    } else {
+        VERTICAL_SCREEN.style.display = 'none';
     }
 });
