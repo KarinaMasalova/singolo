@@ -43,6 +43,7 @@ html {
 
 header {
     position: sticky;
+    z-index: 10;
     top: 0;
     height: 89px;
     background: #2d303a;
@@ -131,36 +132,87 @@ header {
 }
 
 .slider-container {
+    position: relative;
     display: flex;
     height: 595px;
-    justify-content: flex-start;
+    z-index: 1;
 }
 
-.left-arrow,
-.right-arrow {
-    width: 12px;
+.previous-arrow,
+.next-arrow {
+    position: absolute;
+    top: 47%;
 }
 
-.left-arrow:hover,
-.right-arrow:hover {
+.previous-arrow {
+    margin-left: 2px;
+}
+
+.next-arrow {
+    right: 0%;
+}
+
+.previous-arrow:hover,
+.next-arrow:hover {
     opacity: 0.5;
 }
 
-.left-arrow {
-    padding: 29.9% 0 0 0.25%;
+.iphone {
+    position: absolute;
+    width: 215px;
+    height: 458px;
+    z-index: 2;
+    background-image: url(./assets/img/iPhone.png);
+    border-radius: 26px;
 }
 
-.right-arrow {
-    margin: 29.9% 0 0 19.1%;
+.first-iphone {
+    top: 8.9%;
+    left: 7.7%;
+    box-shadow: 21px 21px 0px 4px rgba(0, 0, 0, 0.15);
 }
 
-.first-iphone img {
-    margin-top: 21.1%;
-    margin-left: 23%;
+.second-iphone {
+    transform: rotate(-270deg);
+    top: 8.9%;
+    right: 23.2%;
+    box-shadow: 21px -21px 0px 4px rgba(0, 0, 0, 0.15);
 }
 
-.second-iphone img {
-    margin: 35.4% 0 0 25.6%;
+.iphone-screen-vertical {
+    position: absolute;
+    margin: 30.2% 0px 0px 6.4%;
+    width: 188px;
+    height: 333px;
+}
+
+.iphone-screen-horizontal {
+    position: absolute;
+    top: 30.1%;
+    right: -27.6%;
+    width: 333px;
+    height: 188px;
+    transform: rotate(-90deg);
+}
+
+.iphone-button {
+    position: absolute;
+    width: 19%;
+    height: 9%;
+    margin: 190% 0 0 40%;
+    z-index: 3;
+    border-radius: 100%;
+    background-color: #fafafa;
+    background-image: url(./assets/img/iphone-button.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48%;
+    cursor: pointer;
+}
+
+.iphone-button:hover {
+    background-color: lightgray;
+    box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 /*our services block*/
