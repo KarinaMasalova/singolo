@@ -5,6 +5,10 @@ const PORTFOLIO = document.getElementById('portfolio');
 const ABOUT_US = document.getElementById('about');
 const CONTACT = document.getElementById('contact');
 
+const SLIDES = document.querySelectorAll('.slide');
+let currentSlide = 0;
+let isEnabled = true;
+
 const VERTICAL_iPHONE = document.getElementById('vertical-iphone');
 const HORIZONTAL_iPHONE = document.getElementById('horizontal-iphone');
 
@@ -15,10 +19,13 @@ const PORTFOLIO_TABS = document.getElementById('portfolio-nav-buttons');
 
 const SUBMIT_BUTTON = document.getElementById('submit');
 
+/*menu anchors*/
 MENU.addEventListener('click', function (event) {
     MENU.querySelectorAll('a').forEach(element => element.classList.remove('active'));
     event.target.classList.add('active');
 });
+
+/*switching menu while scrolling*/
 
 window.addEventListener('scroll', () => {
     if(window.scrollY < SERVICES.offsetTop - HEADER.offsetHeight) {
@@ -43,10 +50,78 @@ window.addEventListener('scroll', () => {
     }
 });
 
+/*slider*/
+function changeCurrentSlide(n) {
+    currentSlide = (n + SLIDES.length) % SLIDES.length;
+}
+
+function hideSlide(direction) {
+    isEnabled = false;
+    SLIDES[currentSlide].classList.add(direction);
+    SLIDES[currentSlide].addEventListener('animationend', function() {
+        this.classList.remove('active-slide', direction);
+    });
+}
+
+function showSlide(direction) {
+    SLIDES[currentSlide].classList.add('next-slide', direction);
+    SLIDES[currentSlide].addEventListener('animationend', function() {
+        this.classList.remove('next-slide', direction);
+        this.classList.add('active-slide');
+        isEnabled = true;
+    });
+}
+
+function previousSlide(n) {
+    hideSlide('to-right');
+    changeCurrentSlide(n - 1);
+    showSlide('from-left');
+}
+
+function nextSlide(n) {
+    hideSlide('to-left');
+    changeCurrentSlide(n + 1);
+    showSlide('from-right');
+}
+
+document.querySelector('.previous-arrow a img').addEventListener('click', function() {
+    if(isEnabled) {
+        previousSlide(currentSlide);
+    }
+});
+
+document.querySelector('.next-arrow a img').addEventListener('click', function() {
+    if(isEnabled) {
+        nextSlide(currentSlide);
+    }
+});
+
+/*iphone buttons to switch off the screen*/
+
+HORIZONTAL_iPHONE.addEventListener ('click', function (event) {
+    if (HORIZONTAL_SCREEN.style.display == 'none') {
+        HORIZONTAL_SCREEN.style.display = 'inherit';
+    } else {
+        HORIZONTAL_SCREEN.style.display = 'none';
+    }
+});
+
+VERTICAL_iPHONE.addEventListener ('click', function (event) {
+    if (VERTICAL_SCREEN.style.display == 'none') {
+        VERTICAL_SCREEN.style.display = 'inherit';
+    } else {
+        VERTICAL_SCREEN.style.display = 'none';
+    }
+});
+
+/*switching tabs*/
+
 PORTFOLIO_TABS.addEventListener('click', (event) => {
     PORTFOLIO_TABS.querySelectorAll('p').forEach(element => element.classList.remove('active-tab'));
     event.target.classList.add('active-tab');
 });
+
+/*submit form*/
 
 SUBMIT_BUTTON.addEventListener('click', (event) => {
     if (document.getElementById('name').value !== '' && document.getElementById('email').value !== '') {
@@ -70,21 +145,5 @@ SUBMIT_BUTTON.addEventListener('click', (event) => {
         document.getElementById('message-block').classList.remove('hidden');
         document.body.style.overflowY = 'hidden';
         document.getElementById('feedback-form').reset();
-    }
-});
-
-HORIZONTAL_iPHONE.addEventListener ('click', function (event) {
-    if (HORIZONTAL_SCREEN.style.display == 'none') {
-        HORIZONTAL_SCREEN.style.display = 'inherit';
-    } else {
-        HORIZONTAL_SCREEN.style.display = 'none';
-    }
-});
-
-VERTICAL_iPHONE.addEventListener ('click', function (event) {
-    if (VERTICAL_SCREEN.style.display == 'none') {
-        VERTICAL_SCREEN.style.display = 'inherit';
-    } else {
-        VERTICAL_SCREEN.style.display = 'none';
     }
 });
