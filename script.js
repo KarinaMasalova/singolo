@@ -143,7 +143,6 @@ SUBMIT_BUTTON.addEventListener('click', (event) => {
         }
 
         document.getElementById('message-block').classList.remove('hidden');
-        document.body.style.overflowY = 'hidden';
         document.getElementById('feedback-form').reset();
     }
 });
