@@ -15,7 +15,8 @@ const HORIZONTAL_iPHONE = document.getElementById('horizontal-iphone');
 const VERTICAL_SCREEN = document.getElementById('vertical-screen');
 const HORIZONTAL_SCREEN = document.getElementById('horizontal-screen');
 
-const PORTFOLIO_TABS = document.getElementById('portfolio-nav-buttons');
+const PORTFOLIO_TABS = document.querySelectorAll('.portfolio-button');
+const PORTFOLIO_PICTURES = document.querySelector('.portfolio-projects-container');
 
 const SUBMIT_BUTTON = document.getElementById('submit');
 
@@ -114,12 +115,17 @@ VERTICAL_iPHONE.addEventListener ('click', function (event) {
     }
 });
 
-/*switching tabs*/
+/*switching tabs && shift pictures*/
 
-PORTFOLIO_TABS.addEventListener('click', (event) => {
-    PORTFOLIO_TABS.querySelectorAll('p').forEach(element => element.classList.remove('active-tab'));
-    event.target.classList.add('active-tab');
-});
+PORTFOLIO_TABS.forEach(tab => tab.addEventListener("click", (event) => {
+    if(!event.target.classList.contains("active-tab")) {
+      let pictures = [...PORTFOLIO_PICTURES.querySelectorAll(".portfolio-project")];
+      pictures.unshift(pictures.pop());
+      pictures.forEach(img => PORTFOLIO_PICTURES.append(img));
+    }
+    PORTFOLIO_TABS.forEach(tab => tab.classList.remove('active-tab'));
+    event.target.classList.add("active-tab");
+}));
 
 /*submit form*/
 

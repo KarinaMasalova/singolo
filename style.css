@@ -466,9 +466,13 @@ p.portfolio-button.active-tab {
     overflow: hidden;
 }
 
-.portfolio-project.line-2,
-.portfolio-project.line-3 {
-    margin-top: 16px;
+.portfolio-project {
+    margin-bottom: 20px;
+}
+
+.portfolio-project:hover {
+    cursor: pointer;
+    opacity: 0.3;
 }
 
 /*About Us*/
