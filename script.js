@@ -155,13 +155,13 @@ SUBMIT_BUTTON.addEventListener('click', (event) => {
         if(subject !== '') {
             document.getElementById('second-result').innerText = 'Subject: ' + subject;
         } else {
-            document.getElementById('second-result').innerText = 'Without subject';
+            document.getElementById('second-result').innerText = 'No subject';
         }
         
         if(description !== '') {
             document.getElementById('third-result').innerText = 'Description: ' + description;
         } else {
-            document.getElementById('third-result').innerText = 'Without description';
+            document.getElementById('third-result').innerText = 'No description';
         }
         
         document.getElementById('message-block').classList.remove('hidden');
