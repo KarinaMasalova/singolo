@@ -18,35 +18,33 @@ const HORIZONTAL_SCREEN = document.getElementById('horizontal-screen');
 const PORTFOLIO_TABS = document.querySelectorAll('.portfolio-button');
 const PORTFOLIO_PICTURES = document.querySelector('.portfolio-projects-container');
 
+let isActive = true;
+const portfolioIMG = PORTFOLIO_PICTURES.querySelectorAll(".portfolio-project");
+
 const SUBMIT_BUTTON = document.getElementById('submit');
 const CLOSE_BTN = document.querySelector('.message-block-btn');
-
-/*menu anchors*/
-MENU.addEventListener('click', function (event) {
-    MENU.querySelectorAll('a').forEach(element => element.classList.remove('active'));
-    event.target.classList.add('active');
-});
 
 /*switching menu while scrolling*/
 
 window.addEventListener('scroll', () => {
-    if(window.scrollY < SERVICES.offsetTop - HEADER.offsetHeight) {
+    let currentPosition = window.scrollY + 95;
+    if(currentPosition < SERVICES.offsetTop - HEADER.offsetHeight) {
         MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
         document.getElementById('home-scroll').classList.add('active');
     }
-    if(window.scrollY >= SERVICES.offsetTop - HEADER.offsetHeight && window.scrollY < PORTFOLIO.offsetTop - HEADER.offsetHeight) {
+    if(currentPosition >= SERVICES.offsetTop - HEADER.offsetHeight && currentPosition < PORTFOLIO.offsetTop - HEADER.offsetHeight) {
         MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
         document.getElementById('services-scroll').classList.add('active');
     }
-    if(window.scrollY >= PORTFOLIO.offsetTop - HEADER.offsetHeight && window.scrollY < ABOUT_US.offsetTop - HEADER.offsetHeight) {
+    if(currentPosition >= PORTFOLIO.offsetTop - HEADER.offsetHeight && currentPosition < ABOUT_US.offsetTop - HEADER.offsetHeight) {
         MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
         document.getElementById('portfolio-scroll').classList.add('active');
     }
-    if(window.scrollY >= ABOUT_US.offsetTop - HEADER.offsetHeight && window.scrollY < CONTACT.offsetTop - HEADER.offsetHeight) {
+    if(currentPosition >= ABOUT_US.offsetTop - HEADER.offsetHeight && currentPosition < CONTACT.offsetTop - HEADER.offsetHeight) {
         MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
         document.getElementById('about-scroll').classList.add('active');
     }
-    if(window.scrollY >= CONTACT.offsetTop - HEADER.offsetHeight) {
+    if(currentPosition >= CONTACT.offsetTop - HEADER.offsetHeight) {
         MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
         document.getElementById('contact-scroll').classList.add('active');
     }
@@ -128,6 +126,23 @@ PORTFOLIO_TABS.forEach(tab => tab.addEventListener("click", (event) => {
     event.target.classList.add("active-tab");
 }));
 
+/*add borders to portfolio-pictures*/
+
+portfolioIMG.forEach(img => img.addEventListener("click", (event) => {
+  if ( event.target.classList.contains("bordered") ) {
+    isActive = false;
+  }
+
+  PORTFOLIO_PICTURES.querySelectorAll("img").forEach(pic => pic.classList.remove("bordered"));
+  
+  if (isActive) {
+    event.target.classList.add("bordered");
+  }
+
+  isActive = true;
+}));
+
+
 /*submit form*/
 
 SUBMIT_BUTTON.addEventListener('click', (event) => {
@@ -135,18 +150,18 @@ SUBMIT_BUTTON.addEventListener('click', (event) => {
         event.preventDefault(); //remove default behaviour
         const subject = document.getElementById('subject').value.toString();
         const description = document.getElementById('description').value.toString();
-        document.getElementById('first-result').innerText = 'Письмо отправлено';
+        document.getElementById('first-result').innerText = 'The letter was sent';
 
         if(subject !== '') {
-            document.getElementById('second-result').innerText = 'Тема: ' + subject;
+            document.getElementById('second-result').innerText = 'Subject: ' + subject;
         } else {
-            document.getElementById('second-result').innerText = 'Без темы';
+            document.getElementById('second-result').innerText = 'No subject';
         }
         
         if(description !== '') {
-            document.getElementById('third-result').innerText = 'Описание: ' + description;
+            document.getElementById('third-result').innerText = 'Description: ' + description;
         } else {
-            document.getElementById('third-result').innerText = 'Без описания';
+            document.getElementById('third-result').innerText = 'No description';
         }
         
         document.getElementById('message-block').classList.remove('hidden');
