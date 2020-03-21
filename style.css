@@ -286,6 +286,7 @@ header {
     height: 494px;
     border-bottom: solid #fff 6px;
     background-color: #f2f2f2;
+    scroll-margin-top: 95px;
 }
 
 .our-services-container {
@@ -368,6 +369,7 @@ header {
 .portfolio-block {
     background-color: #2d303a;
     border-bottom: solid #323746 6px;
+    scroll-margin-top: 95px;
 }
 
 .portfolio-container {
@@ -462,12 +464,17 @@ p.portfolio-button.active-tab {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 1.9%;
-    max-height: 602px;
     overflow: hidden;
 }
 
 .portfolio-project {
     margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio-project:nth-child(n + 13) {
+    display: none;
 }
 
 .portfolio-project:hover {
@@ -475,11 +482,20 @@ p.portfolio-button.active-tab {
     opacity: 0.3;
 }
 
+.bordered {
+    border: 5px solid #F06C64;
+}
+
+.bordered:hover {
+    opacity: 1;
+}
+
 /*About Us*/
 
 .about-us-block {
     border-bottom: 6px #fff solid;
     background-color: #f2f2f2;
+    scroll-margin-top: 95px;
 }
 
 .about-us-container {
