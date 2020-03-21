@@ -712,7 +712,7 @@ form input {
     max-height: 200px;
     top: 30%;
     left: 30%;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 p span.possible-messages {
