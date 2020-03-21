@@ -709,8 +709,10 @@ form input {
     background: #0008;
     min-width: 510px;
     max-width: 510px;
+    max-height: 200px;
     top: 30%;
     left: 30%;
+    overflow: scroll;
 }
 
 p span.possible-messages {

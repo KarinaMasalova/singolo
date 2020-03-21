@@ -150,18 +150,18 @@ SUBMIT_BUTTON.addEventListener('click', (event) => {
         event.preventDefault(); //remove default behaviour
         const subject = document.getElementById('subject').value.toString();
         const description = document.getElementById('description').value.toString();
-        document.getElementById('first-result').innerText = 'Письмо отправлено';
+        document.getElementById('first-result').innerText = 'The letter was sent';
 
         if(subject !== '') {
-            document.getElementById('second-result').innerText = 'Тема: ' + subject;
+            document.getElementById('second-result').innerText = 'Subject: ' + subject;
         } else {
-            document.getElementById('second-result').innerText = 'Без темы';
+            document.getElementById('second-result').innerText = 'Without subject';
         }
         
         if(description !== '') {
-            document.getElementById('third-result').innerText = 'Описание: ' + description;
+            document.getElementById('third-result').innerText = 'Description: ' + description;
         } else {
-            document.getElementById('third-result').innerText = 'Без описания';
+            document.getElementById('third-result').innerText = 'Without description';
         }
         
         document.getElementById('message-block').classList.remove('hidden');
