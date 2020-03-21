@@ -35,16 +35,25 @@ textarea {
     border: 0 none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*header*/
 
 header {
+    position: sticky;
+    z-index: 10;
+    top: 0;
     height: 89px;
     background: #2d303a;
     border-bottom: #323746 solid 6px;
 }
 
 .wrap {
+    position: relative;
     margin: 0 auto;
+    width: 100%;
     max-width: 940px;
 }
 
@@ -89,16 +98,23 @@ header {
     padding: 8.8% 0 0 6.3%;
 }
 
-.main-page {
-    color: #f06c64 !important;
-}
-
 .navigation li a {
     font-size: 12px;
     font-family: "Lato-Bold";
-    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.active {
+    color: #f06c64;
+}
+
+.navigation li a:not(.active) {
+    color: #fff;
+}
+
+.navigation li a:not(.active):hover {
+    color: #f06c64;
 }
 
 .navigation li:not(:first-child)::before {
@@ -109,50 +125,160 @@ header {
     color: #494e62;
 }
 
-.navigation li a:hover {
-    color: #f06c64;
-}
-
 /*Slider block*/
 
 .slider-block {
+    position: relative;
+    display: flex;
     height: 595px;
     background-color: #f06c64;
     border-bottom: solid #ea676b 5px;
 }
 
 .slider-container {
-    display: flex;
+    width: 100%;
     height: 595px;
-    justify-content: flex-start;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.left-arrow,
-.right-arrow {
-    width: 12px;
+.slide {
+    display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    height: 600px;
 }
 
-.left-arrow:hover,
-.right-arrow:hover {
+.slide.next-slide,
+.slide.active-slide {
+    display: block;
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+/**/
+
+.previous-arrow,
+.next-arrow {
+    position: absolute;
+    top: 47%;
+}
+
+.previous-arrow {
+    margin-left: 2px;
+}
+
+.next-arrow {
+    right: 0%;
+}
+
+.previous-arrow:hover,
+.next-arrow:hover {
     opacity: 0.5;
 }
 
-.left-arrow {
-    padding: 29.9% 0 0 0.25%;
+.iphone {
+    position: absolute;
+    width: 215px;
+    height: 458px;
+    z-index: 2;
+    background-image: url(./assets/img/iPhone.png);
+    border-radius: 26px;
 }
 
-.right-arrow {
-    margin: 29.9% 0 0 19.1%;
+.first-iphone {
+    top: 8.9%;
+    left: 7.7%;
+    box-shadow: 21px 21px 0px 4px rgba(0, 0, 0, 0.15);
 }
 
-.first-iphone img {
-    margin-top: 21.1%;
-    margin-left: 23%;
+.second-iphone {
+    transform: rotate(-270deg);
+    top: 8.9%;
+    right: 23.2%;
+    box-shadow: 21px -21px 0px 4px rgba(0, 0, 0, 0.15);
 }
 
-.second-iphone img {
-    margin: 35.4% 0 0 25.6%;
+.iphone-screen-vertical {
+    position: absolute;
+    margin: 30.2% 0px 0px 6.4%;
+    width: 188px;
+    height: 333px;
 }
+
+.iphone-screen-horizontal {
+    position: absolute;
+    top: 30.1%;
+    right: -27.6%;
+    width: 333px;
+    height: 188px;
+    transform: rotate(-90deg);
+}
+
+.iphone-button {
+    position: absolute;
+    width: 19%;
+    height: 9%;
+    margin: 190% 0 0 40%;
+    z-index: 3;
+    border-radius: 100%;
+    background-color: #fafafa;
+    background-image: url(./assets/img/iphone-button.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48%;
+    cursor: pointer;
+}
+
+.iphone-button:hover {
+    background-color: lightgray;
+    box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+/*for anchors*/
+
+/*
+.anchor {
+    display: block;
+    position: relative;
+    top: -162px;
+    visibility: hidden;
+}
+*/
 
 /*our services block*/
 
@@ -274,56 +400,79 @@ header {
     padding: 2.9% 0 1.2% 0;
 }
 
-.portfolio-navigation {
+.portfolio-navigation ul {
     display: flex;
-}
+    width: 300px;
+    list-style: none;
+  }
 
-.portfolio-button {
-    padding: 3px 7px;
-    margin: 0 5px 0 1px;
+.portfolio-navigation ul li p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1px;
     font-size: 12px;
-    font-family: "Lato-Regular";
     font-weight: 400;
-    border: 0.5px solid #767e9e;
-    border-radius: 4px;
+    font-family: "Lato-Regular";
+    border: 1px solid #767e9e;
+    border-radius: 5px;
     color: #767e9e;
-    background-color: transparent;
     text-transform: capitalize;
 }
 
-.portfolio-button.btn-1 {
-    border: 0.5px solid #dedede;
-    color: #dedede;
+p.portfolio-button.btn-1 {
+    margin-left: 1px;
+    padding: 3px 7px;
+    width: 13px;
 }
 
-.portfolio-button.btn-2,
-.portfolio-button.btn-3 {
-    margin-left: 4px;
+p.portfolio-button.btn-2 {
+    padding: 3px 6px;
+    width: 64px;
+    letter-spacing: -0.05px;
+    margin-left: 10px;
 }
 
-.portfolio-button.btn-4 {
-    margin-left: 4px;
-    padding: 0 5px 0 6px;
+p.portfolio-button.btn-3 {
+    width: 90px;
+    margin-left: 10px;
+    padding: 3px 0px;
+}
+  
+p.portfolio-button.btn-4 {
+    width: 50px;
+    margin-left: 10px;
+    padding: 3px;
 }
 
-.portfolio-button:hover {
+.portfolio-button:hover,
+p.portfolio-button.active-tab {
     color: #dedede;
     border-color: #dedede;
     cursor: pointer;
+}
+
+.portfolio-nav-buttons li p.portfolio-button.btn-1.active-tab {
+    border: 0.5px solid #dedede;
+    color: #dedede;
 }
 
 .portfolio-projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 2%;
+    margin-top: 1.9%;
     max-height: 602px;
     overflow: hidden;
 }
 
-.portfolio-project.line-2,
-.portfolio-project.line-3 {
-    margin-top: 16px;
+.portfolio-project {
+    margin-bottom: 20px;
+}
+
+.portfolio-project:hover {
+    cursor: pointer;
+    opacity: 0.3;
 }
 
 /*About Us*/
@@ -439,6 +588,7 @@ header {
 .get-a-quote-block {
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
+    scroll-margin-top: 95px;
 }
 
 .get-a-quote-container {
@@ -508,7 +658,7 @@ form input {
 }
 
 #submit {
-    margin-top: 15px;
+    margin: 15px 0 2.6% 0;
     width: 15%;
     height: 7%;
     background-color: #d6564f;
@@ -520,6 +670,43 @@ form input {
 #submit:hover {
     background-color: rgb(45, 48, 58, 0.5);
     cursor: pointer;
+}
+
+#message-block {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #0008;
+}
+
+#message-block.hidden {
+    display: none;
+}
+
+#message {
+    position: absolute;
+    padding: 2%;
+    border: 2px solid #000;
+    text-align: center;
+    background: #0008;
+    min-width: 510px;
+    max-width: 510px;
+    top: 30%;
+    left: 30%;
+}
+
+p span.possible-messages {
+    font-size: 17px;
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    color: #f0d8d9;
+}
+
+.message-block-btn {
+    margin-top: 10px;
+    font-family: "Lato-Regular";
 }
 
 .contact-info {

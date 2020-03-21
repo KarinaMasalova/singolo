@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="fonts.css">
     </head>
 
-    <body>
+    <body id="home">
         <header>
             <div class="wrap">
                 <div class="header-block">
@@ -19,13 +19,13 @@
                             <h1>singolo<span>*</span></h1>
                         </a>
                     </div>
-                    <nav class="navbar">
+                    <nav class="navbar" id="menu">
                         <ul class="navigation">
-                            <li><a class="main-page" href="#">home</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="#">portfolio</a></li>
-                            <li><a href="#">about</a></li>
-                            <li><a href="#">contact</a></li>
+                            <li><a class="active" href="#home" id="home-scroll">home</a></li>
+                            <li><a href="#services" id="services-scroll">services</a></li>
+                            <li><a href="#portfolio" id="portfolio-scroll">portfolio</a></li>
+                            <li><a href="#about" id="about-scroll">about</a></li>
+                            <li><a href="#contact" id="contact-scroll">contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -36,22 +36,33 @@
             <div class="slider-block">
                 <div class="wrap">
                     <div class="slider-container">
-                        <div class="left-arrow">
+                        <div class="slide active-slide">
+                            <div class="iphone first-iphone" id="vertical-iphone">
+                                <div class="iphone-screen">
+                                    <img class="iphone-screen-vertical" id="vertical-screen" src="./assets/img/iPhoneVerticalScreen.png" alt="" style="display: inherit">
+                                </div>
+                                <div class="iphone-button"></div>
+                            </div>
+                            <div class="iphone second-iphone" id="horizontal-iphone">
+                                <div class="iphone-screen">
+                                    <img class="iphone-screen-horizontal" id="horizontal-screen" src="./assets/img/iPhoneHorizontalScreen.png" alt="" style="display: inherit">
+                                </div>
+                                <div class="iphone-button"></div>
+                            </div>
+                        </div>
+                        <div class="slide next-slide">
+                            <img src="./assets/img/blue-slide.jpg" alt="">
+                        </div>
+                        <div class="previous-arrow">
                             <a href="#"><img src="assets/img/arrow-left.svg" alt=""></a>
                         </div>
-                        <div class="first-iphone">
-                            <img src="assets/img/iPhoneVertical.png" alt="">
-                        </div>
-                        <div class="second-iphone">
-                            <img src="assets/img/iPhoneHorizontal.png" alt="">
-                        </div>
-                        <div class="right-arrow">
+                        <div class="next-arrow">
                             <a href="#"><img src="assets/img/arrow-right.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="our-services">
+            <div class="our-services" id="services">
                 <div class="wrap">
                     <div class="our-services-container">
                         <div class="our-services-headline">
@@ -145,7 +156,7 @@
                 </div>
             </div>
 
-            <section class="portfolio-block">
+            <section class="portfolio-block" id="portfolio">
                 <div class="wrap">
                     <div class="portfolio-container">
                         <div class="portfolio-headline">
@@ -155,54 +166,32 @@
                             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                         </div>
                         <div class="portfolio-navigation">
-                            <button class="portfolio-button btn-1">all</button>
-                            <button class="portfolio-button btn-2">web design</button>
-                            <button class="portfolio-button btn-3">graphic design</button>
-                            <button class="portfolio-button btn-4">artwork</button>
+                            <ul class="portfolio-nav-buttons" id="portfolio-nav-buttons">
+                                <li><p class="portfolio-button btn-1 active-tab">all</p></li>
+                                <li><p class="portfolio-button btn-2">web design</p></li>
+                                <li><p class="portfolio-button btn-3">graphic design</p></li>
+                                <li><p class="portfolio-button btn-4">artwork</p></li>
+                            </ul>
                         </div>
                         <div class="portfolio-projects-container">
-                            <div class="portfolio-project">
-                                <img src="assets/img/project-1.svg" alt="">
-                            </div>
-                            <div class="portfolio-project">
-                                <img src="assets/img/project-2.svg" alt="">
-                            </div>
-                            <div class="portfolio-project">
-                                <img src="assets/img/project-3.svg" alt="">
-                            </div>
-                            <div class="portfolio-project">
-                                <img src="assets/img/project-4.svg" alt="">
-                            </div>
-                            <div class="portfolio-project line-2">
-                                <img src="assets/img/project-5.svg" alt="">
-                            </div>
-                            <div class="portfolio-project line-2">
-                                <img src="assets/img/project-6.svg" alt="">
-                            </div>
-                            <div class="portfolio-project line-2">
-                                <img src="assets/img/project-7.svg" alt="">
-                            </div>
-                            <div class="portfolio-project line-2">
-                                <img src="assets/img/project-8.svg" alt="">
-                            </div>
-                            <div class="portfolio-project line-3">
-                                <img src="assets/img/project-9.svg" alt="">
-                            </div>
-                            <div class="portfolio-project line-3">
-                                <img src="assets/img/project-10.svg" alt="">
-                            </div>
-                            <div class="portfolio-project line-3">
-                                <img src="assets/img/project-11.svg" alt="">
-                            </div>
-                            <div class="portfolio-project line-3">
-                                <img src="assets/img/project-12.svg" alt="">
-                            </div>
+                            <img class="portfolio-project" src="assets/img/project-1.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-2.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-3.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-4.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-5.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-6.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-7.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-8.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-9.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-10.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-11.svg" alt="">
+                            <img class="portfolio-project" src="assets/img/project-12.svg" alt="">
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="about-us-block">
+            <section class="about-us-block" id="about">
                 <div class="wrap">
                     <div class="about-us-container">
                         <div class="about-us-headline">
@@ -362,7 +351,7 @@
                 </div>
             </section>
 
-            <section class="get-a-quote-block">
+            <section class="get-a-quote-block" id="contact">
                 <div class="wrap">
                     <div class="get-a-quote-container">
                         <div class="get-a-quote-headline">
@@ -372,12 +361,20 @@
                             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                         </div>
                         <div class="feedback">
-                            <form class="feedback-form" action="#" method="POST">
+                            <form class="feedback-form" action="#contact" method="POST">
                                 <input type="text" name="name" id="name" placeholder="Name (Required)" autocomplete="off" required style="font-family: 'Lato-Regular'; font-size: 12px;">
-                                <input type="email" name="email" id="email" placeholder="Email (Required)" autocomplete="off" required style="font-family: 'Lato-Regular'; font-size: 12px;">
+                                <input type="email" name="email" id="email" placeholder="Email (Required)" autocomplete="off" required pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+.[a-z]$" style="font-family: 'Lato-Regular'; font-size: 12px;">
                                 <input type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off" style="font-family: 'Lato-Regular'; font-size: 12px;">
-                                <textarea class="textarea-description" cols="30" rows="10" placeholder="Describe your project in detail..." style="resize: none; font-family: 'Lato-Regular'; font-size: 12px;"></textarea>
-                                <input type="submit" id="submit" value="Submit">
+                                <textarea class="textarea-description" id="description" cols="30" rows="10" placeholder="Describe your project in detail..." style="resize: none; font-family: 'Lato-Regular'; font-size: 12px;"></textarea>
+                                <button id="submit">Submit</button>
+                                <div id="message-block" class="hidden">
+                                    <div id="message">
+                                        <p><span class="possible-messages" id="first-result"></span></p>
+                                        <p><span class="possible-messages" id="second-result"></span></p>
+                                        <p><span class="possible-messages" id="third-result"></span></p>
+                                        <button class="message-block-btn">OK</button>
+                                    </div>
+                                </div>
                             </form>
                             <div class="contact-info">
                                 <div class="contact-info-headline">
@@ -492,5 +489,6 @@
                 </div>
             </div>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>
