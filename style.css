@@ -130,7 +130,7 @@ header {
 .slider-block {
     position: relative;
     display: flex;
-    height: 595px;
+    /*height: 595px;*/
     background-color: #f06c64;
     border-bottom: solid #ea676b 5px;
 }
@@ -146,7 +146,11 @@ header {
     display: none;
     position: relative;
     animation: 0.5s ease-in-out;
-    height: 600px;
+    /*height: 600px;
+    height: 83.8vh;*/
+    height: 98.3vh;
+    max-height: 600px;
+    width: 100%;
 }
 
 .slide.next-slide,
@@ -213,10 +217,11 @@ header {
 
 .iphone {
     position: absolute;
-    width: 215px;
-    height: 458px;
+    width: 22.8%; /*215px;*/
+    height: 76.2%; /*458px;*/
     z-index: 2;
     background-image: url(./assets/img/iPhone.png);
+    background-repeat: no-repeat;
     border-radius: 26px;
 }
 
@@ -236,8 +241,10 @@ header {
 .iphone-screen-vertical {
     position: absolute;
     margin: 30.2% 0px 0px 6.4%;
-    width: 188px;
-    height: 333px;
+    /*width: 188px;
+    height: 333px;*/
+    width: 88%;
+    height: 72.8%;
 }
 
 .iphone-screen-horizontal {
@@ -268,17 +275,6 @@ header {
     background-color: lightgray;
     box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
 }
-
-/*for anchors*/
-
-/*
-.anchor {
-    display: block;
-    position: relative;
-    top: -162px;
-    visibility: hidden;
-}
-*/
 
 /*our services block*/
 
