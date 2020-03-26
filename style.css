@@ -136,9 +136,9 @@ header {
 }
 
 .slider-container {
-    /*width: 100%;*/
     margin: 0 4%;
-    height: 595px;
+    height: 100%;
+    max-height: 595px;
     z-index: 1;
     overflow: hidden;
 }
@@ -459,9 +459,16 @@ p.portfolio-button.active-tab {
 }
 
 .portfolio-project {
-    margin-bottom: 20px;
-    box-sizing: border-box;
+    width: 220px;
+    max-height: 187px;
+    flex: 1 0 20%;
+    margin: 6px 20px 8px 5px;
     transition: all 0.3s ease-in-out;
+    list-style: none;
+}
+
+.portfolio-project img {
+    width: 100%;
 }
 
 .portfolio-project:nth-child(n + 13) {
@@ -474,7 +481,7 @@ p.portfolio-button.active-tab {
 }
 
 .bordered {
-    border: 5px solid #F06C64;
+    outline: 5px solid #F06C64;
 }
 
 .bordered:hover {
@@ -502,6 +509,16 @@ p.portfolio-button.active-tab {
 .all-specialists {
     display: flex;
     justify-content: space-between;
+}
+
+.specialist-block {
+    width: calc((100% - 40px) / 3);
+    display: flex;
+    flex-direction: column;
+}
+
+.specialist-photo img {
+    width: 100%;
 }
 
 .specialist-name {
@@ -644,7 +661,7 @@ form input {
 
 #submit {
     margin: 15px 0 2.6% 0;
-    width: 15%;
+    width: calc(100% / 4);
     height: 7%;
     background-color: #d6564f;
     border: solid 2px rgb(45, 48, 58, 0.5);
@@ -671,16 +688,16 @@ form input {
 }
 
 #message {
-    position: absolute;
+    position: fixed;
+    width: 50%;
+    max-height: 200px;
+    top: 30%;
+    left: 22%;
     padding: 2%;
     border: 2px solid #000;
     text-align: center;
     background: #0008;
-    min-width: 510px;
-    max-width: 510px;
-    max-height: 200px;
-    top: 30%;
-    left: 30%;
+
     overflow-y: scroll;
 }
 
