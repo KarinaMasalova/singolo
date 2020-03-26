@@ -131,6 +131,8 @@ header {
 .slider-block {
     position: relative;
     display: flex;
+    max-height: 595px;
+    height: 59vw;
     background-color: #f06c64;
     border-bottom: solid #ea676b 5px;
 }
@@ -147,7 +149,7 @@ header {
     display: none;
     position: relative;
     animation: 0.5s ease-in-out;
-    height: 98.3vh;
+    height: 91vw;
     max-height: 600px;
     width: 100%;
 }
@@ -216,35 +218,35 @@ header {
 
 .iphone {
     position: absolute;
-    width: 22.8vw;
-    height: 76.2vh;
+    width: 21vw;
+    height: 45vw;
     max-width: 216px;
     max-height: 458px;
     z-index: 2;
     background-image: url(./assets/img/iPhone.png);
     background-repeat: no-repeat;
-    border-radius: 26px;
-    background-size: contain;
+    border-radius: 12% / 6%;
+    background-size: cover;
 }
 
 .first-iphone {
     top: 8.9%;
     left: 7.7%;
-    box-shadow: 21px 21px 0px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 2vw 2vw 0px 0.4vw rgba(0, 0, 0, 0.15);
 }
 
 .second-iphone {
     transform: rotate(-270deg);
     top: 8.9%;
     right: 23.2%;
-    box-shadow: 21px -21px 0px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 2vw -2vw 0px 0.4vw rgba(0, 0, 0, 0.15);
 }
 
 .iphone-screen-vertical {
     position: absolute;
     margin: 30.2% 0px 0px 6.4%;
-    width: 88%;
-    height: 72.8%;
+    width: 18.5vw;
+    height: 33vw;
     max-width: 188px;
     max-height: 333px;
 }
@@ -252,9 +254,9 @@ header {
 .iphone-screen-horizontal {
     position: absolute;
     top: 14.2%;
-    right: 6%;
-    width: 19vw;
-    height: 55vh;
+    right: 5.8%;
+    width: 18.4vw;
+    height: 33vw;
     max-width: 189px;
     max-height: 333px;
 }
@@ -262,7 +264,7 @@ header {
 .iphone-button {
     position: absolute;
     width: 4vw;
-    height: 7vh;
+    height: 4vw;
     margin: 189% 0 0 40%;
     z-index: 3;
     border-radius: 100%;
