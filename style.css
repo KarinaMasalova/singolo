@@ -244,7 +244,7 @@ header {
 
 .iphone-screen-vertical {
     position: absolute;
-    margin: 30.2% 0px 0px 6.4%;
+    margin: 30.2% 0px 0px 6.9%; 
     width: 18.5vw;
     height: 33vw;
     max-width: 188px;
@@ -263,8 +263,8 @@ header {
 
 .iphone-button {
     position: absolute;
-    width: 4vw;
-    height: 4vw;
+    width: 3vw;
+    height: 3vw;
     margin: 189% 0 0 40%;
     z-index: 3;
     border-radius: 100%;
@@ -279,6 +279,12 @@ header {
 .iphone-button:hover {
     background-color: lightgray;
     box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.blue-slide {
+    height: 59vw;
+    max-height: 600px;
+    width: 100%;
 }
 
 /*our services block*/
