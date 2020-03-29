@@ -265,10 +265,11 @@ header {
 
 .iphone-button {
     position: absolute;
-    width: 3vw;
-    height: 3vw;
-    margin: 189% 0 0 40%;
+    width: 19%;
+    height: 9%;
     z-index: 3;
+    bottom: 1.8%;
+    right: 41%;
     border-radius: 100%;
     background-color: #fafafa;
     background-image: url(./assets/img/iphone-button.svg);
@@ -866,11 +867,6 @@ p span.possible-messages {
         border: none;
     }
 
-    .header-popup {
-        width: 74vw;
-        height: 100%;
-    }
-
     .header-block {
         height: 71px;
     }
@@ -888,6 +884,44 @@ p span.possible-messages {
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 10;
+        width: 74%;
+        height: 100%;
+        background-color: #2d303a;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 30%;
+    }
+
+    .navigation li {
+        width: 100%;
+        padding: 2% 0 0 18%;
+    }
+
+    .navigation li a {
+        font-size: 24px;
+    }
+
+    .navigation li:not(:first-child)::before {
+        content: none;
+    }
+
+    .navbar-active {
+        display: block;
+    }
+
+    .burger-popup {
+        transition: 0.5s;
+        transform: rotate(90deg);
+    }
+
+    .burger-back {
+        transition: 0.5s;
+        transform: rotate(180deg);
     }
 
     .header-burger {
@@ -895,6 +929,7 @@ p span.possible-messages {
         position: relative;
         top: 33%;
         left: 3%;
+        z-index: 11;
         width: 25px;
         height: 20px;
     }
@@ -1030,26 +1065,5 @@ p span.possible-messages {
 
     .specialist-block {
         width: 100%;
-    }
-}
-
-@media (hover: hover) {
-    .previous-arrow:hover,
-    .next-arrow:hover {
-        opacity: 0.5;
-    }
-
-    .iphone-button:hover {
-        background-color: lightgray;
-        box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
-    }
-
-    .portfolio-project:hover {
-        cursor: pointer;
-        opacity: 0.3;
-    }
-
-    .bordered:hover {
-        opacity: 1;
     }
 }
