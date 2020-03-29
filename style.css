@@ -862,8 +862,6 @@ p span.possible-messages {
 @media (max-width: 767px) {
 
     header {
-        top: 0;
-        left: 0;
         height: 71px;
         border: none;
     }
@@ -887,6 +885,9 @@ p span.possible-messages {
 
     .navbar {
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 
     .header-burger {
@@ -1029,5 +1030,26 @@ p span.possible-messages {
 
     .specialist-block {
         width: 100%;
+    }
+}
+
+@media (hover: hover) {
+    .previous-arrow:hover,
+    .next-arrow:hover {
+        opacity: 0.5;
+    }
+
+    .iphone-button:hover {
+        background-color: lightgray;
+        box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    .portfolio-project:hover {
+        cursor: pointer;
+        opacity: 0.3;
+    }
+
+    .bordered:hover {
+        opacity: 1;
     }
 }
