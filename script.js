@@ -5,6 +5,10 @@ const PORTFOLIO = document.getElementById('portfolio');
 const ABOUT_US = document.getElementById('about');
 const CONTACT = document.getElementById('contact');
 
+const POPUP_MENU = document.querySelector('.navbar');
+const BURGER = document.querySelector('.header-burger');
+const LOGO = document.querySelector('.logo');
+
 const SLIDES = document.querySelectorAll('.slide');
 let currentSlide = 0;
 let isEnabled = true;
@@ -47,6 +51,21 @@ window.addEventListener('scroll', () => {
     if(currentPosition >= CONTACT.offsetTop - HEADER.offsetHeight) {
         MENU.querySelectorAll('a').forEach(el => el.classList.remove('active'));
         document.getElementById('contact-scroll').classList.add('active');
+    }
+});
+
+/*burger-menu*/
+
+BURGER.addEventListener('click', (event) => {
+    if (POPUP_MENU.classList.contains('navbar-active')) {
+        BURGER.classList.add('burger-back');
+        POPUP_MENU.classList.remove('navbar-active');
+        LOGO.removeAttribute('style');
+    } else {
+        BURGER.classList.remove('burger-back');
+        BURGER.classList.add('burger-popup');
+        LOGO.style.left = '13%';
+        POPUP_MENU.classList.add('navbar-active');
     }
 });
 
