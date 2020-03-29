@@ -989,6 +989,10 @@ p span.possible-messages {
         flex: 1 0 30%;
     }
 
+    .portfolio-project:nth-child(n + 9) {
+        display: none;
+    }
+
     .all-specialists {
         flex-wrap: wrap;
         justify-content: center;
