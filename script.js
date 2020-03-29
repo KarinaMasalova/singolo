@@ -60,10 +60,11 @@ BURGER.addEventListener('click', (event) => {
     if (POPUP_MENU.classList.contains('navbar-active')) {
         BURGER.classList.add('burger-back');
         POPUP_MENU.classList.remove('navbar-active');
-        LOGO.style.left = '13%';
+        LOGO.removeAttribute('style');
     } else {
         BURGER.classList.remove('burger-back');
         BURGER.classList.add('burger-popup');
+        LOGO.style.left = '13%';
         POPUP_MENU.classList.add('navbar-active');
     }
 });
