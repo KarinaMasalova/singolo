@@ -7,6 +7,7 @@ const CONTACT = document.getElementById('contact');
 
 const POPUP_MENU = document.querySelector('.navbar');
 const BURGER = document.querySelector('.header-burger');
+const LOGO = document.querySelector('.logo');
 
 const SLIDES = document.querySelectorAll('.slide');
 let currentSlide = 0;
@@ -59,6 +60,7 @@ BURGER.addEventListener('click', (event) => {
     if (POPUP_MENU.classList.contains('navbar-active')) {
         BURGER.classList.add('burger-back');
         POPUP_MENU.classList.remove('navbar-active');
+        LOGO.style.left = '13%';
     } else {
         BURGER.classList.remove('burger-back');
         BURGER.classList.add('burger-popup');

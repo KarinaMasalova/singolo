@@ -872,7 +872,11 @@ p span.possible-messages {
     }
 
     .logo {
+        position: fixed;
         margin: 0 auto;
+        top: 0;
+        left: 40%;
+        z-index: 11;
     }
 
     .logo .logo-text h1 {
