@@ -290,7 +290,6 @@ header {
 /*our services block*/
 
 .our-services {
-    height: 494px;
     border-bottom: solid #fff 6px;
     background-color: #f2f2f2;
     scroll-margin-top: 95px;
@@ -832,4 +831,17 @@ p span.possible-messages {
 .linkedin-footer:hover {
     cursor: pointer;
     opacity: 0.5;
+}
+
+/*media*/
+
+@media (max-width: 1019px) {
+    .services-block {
+        width: 45%;
+    }
+}
+
+/*burger-menu*/
+@media (max-width: 375px) {
+    
 }
